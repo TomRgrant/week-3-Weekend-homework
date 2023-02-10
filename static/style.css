@@ -1,0 +1,80 @@
+.blue_background_white_text {
+    background-color: dodgerblue;
+    color: white;
+}
+
+.no_margin {
+    margin: 0;
+}
+
+.padding2 {
+    padding: 2rem;
+}
+
+.grid_wrapper {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  }
+
+.book_display{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: antiquewhite;
+    border-top: 2px gray solid;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.socials {
+    text-decoration: underline;
+}
+
+.light_grey_background {
+    background-color: lightgrey;
+}
+
+.inspect_book {
+    background-color: darkcyan;
+    color: cornsilk;
+    border-radius: 8px;
+}
+
+.delete_book {
+    background-color: red;
+    color: black;
+    border-radius: 8px;
+}
+
+.book_button {
+    padding: 1rem;
+}
+
+.book_display_text {
+    margin-left: 1rem;
+}
+
+.add_new_book_button {
+    background-color: greenyellow;
+    border-radius: 8px;
+}
+
+.flex_justify_right {
+    display: flex;
+    justify-content: right;
+}
+
+.padding1 {
+    padding: 1rem;
+}
+
+.flex_justify_space_between {
+    display: flex;
+    justify-content: space-between;
+}

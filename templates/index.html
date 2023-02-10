@@ -5,30 +5,34 @@
         {% for book in book_list %}
 
             <section>
-                <div>
-                    <h2>{{ book.title }}</h2>
-                    <h3>{{ book.author }}</h3>
-                    <h4>{{ book.genre }}</h4>
-                    
-                    {% if book.checked_out %}
-                        <p><i>Checked Out</i></p>
-                    {% endif %}
-    
-                    <form action="book/{{ loop.index0 }}" method="get">
-                        <input type="submit" value="Inspect Book">
-                    </form>
+                <div class="book_display">
+                    <div class="book_display_text">
+                        <h2>{{ book.title }}</h2>
+                        <h3>{{ book.author }}</h3>
+                        <h4>{{ book.genre }}</h4>
+                        
+                        {% if book.checked_out %}
+                            <p><i>Checked Out</i></p>
+                        {% endif %}
+                    </div>
 
-                    <form action="book/{{ loop.index0 }}/delete" method="post">
-                        <input type="submit" value="Delete Book">
-                    </form>
+                    <div>
+                        <form class="book_button" action="book/{{ loop.index0 }}" method="get">
+                            <input class="inspect_book" type="submit" value="Inspect Book">
+                        </form>
+
+                        <form class="book_button" action="book/{{ loop.index0 }}/delete" method="post">
+                            <input class="delete_book" type="submit" value="Delete Book">
+                        </form>
+                    </div>
                 </div>
             </section>
 
         {% endfor %}
 
-        <div>
+        <div class="flex_justify_right">
             <form action="book/add_new_book" method="get">
-                <input type="submit" value="Add New Book">
+                <input class="add_new_book_button" type="submit" value="Add New Book">
             </form>
         </div>
     </section>

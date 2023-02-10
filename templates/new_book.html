@@ -3,19 +3,19 @@
 {% block content %}
 
     <form action="/book/added_new_book" method="post">
-        <section>
+        <section class="book_display">
 
-            <div>
+            <div class="padding1">
                 <label for="title">Enter Book Title:</label>
                 <input type="text" name="title" id="title">
             </div>
     
-            <div>
+            <div class="padding1">
                 <label for="author">Enter Book Author:</label>
                 <input type="text" name="author" id="author">
             </div>
     
-            <div>
+            <div class="padding1">
                 <label for="fantasy">Fantasy</label>
                 <input type="radio" id="fantasy" name="genre" value="Fantasy">
     
@@ -26,8 +26,9 @@
                 <input type="radio" id="mystery" name="genre" value="Mystery">
             </div>
 
-            <div>
+            <div class="padding1 flex_justify_space_between">
                 <input type="submit" name="new_book" id="new_book" value="Submit Book Info">
+                <a href="/">Home</a>
             </div>
         </section>
     </form>

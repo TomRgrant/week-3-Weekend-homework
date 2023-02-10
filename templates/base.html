@@ -8,21 +8,26 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <title>{{ title }}</title>
 </head>
-<body>
-
-    <header>
-        <h1>Weekend Bookies</h1>
-    </header>
-
-    <section>
-        {% block content %}
-            
-        {% endblock content %}
-    </section>
-
-    <footer>
-        <p>&#169Weekend Bookies</p>
-    </footer>
-
+<body class="light_grey_background">
+    <div class="grid_wrapper">
+        <header class="blue_background_white_text padding2">
+            <h1 class="no_margin">Weekend Bookies</h1>
+        </header>
+    
+        <section>
+            {% block content %}
+                
+            {% endblock content %}
+        </section>
+    
+        <footer class="blue_background_white_text padding2">
+            <p class="no_margin">&#169Weekend Bookies</p>
+            <div class="socials">
+                <p>WeekendBookies@twitter</p>
+                <p>WeekendBookies@gmail.com</p>
+                <p>Call us at 01265730774</p>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
