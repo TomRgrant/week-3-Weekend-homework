@@ -4,7 +4,7 @@ import datetime
 from app import app
 
 from models.book import Book
-from models.book_list import get_book_list, add_new_book, delete_book
+from models.book_list import get_book_list, add_new_book, delete_book, update_checked_out, update_checked_in
 
 @app.route("/")
 def index():
@@ -33,4 +33,12 @@ def create_new_book():
 @app.route("/book/<index>/delete", methods=["POST"])
 def delete_a_book(index):
     delete_book(int(index))
+    return redirect("/")
+
+@app.route("/book/<index>/update_checked_out", methods=["POST"])
+def update_check_book(index):
+    if 'checked_out' in request.form.keys():
+        update_checked_out(int(index))
+    else:
+        update_checked_in(int(index))
     return redirect("/")

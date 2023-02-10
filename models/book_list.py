@@ -16,3 +16,11 @@ def add_new_book(new_book):
 
 def delete_book(index):
     book_list.pop(index)
+
+def update_checked_out(index):
+    book = book_list[index]
+    book.checked_out = True
+
+def update_checked_in(index):
+    book = book_list[index]
+    book.checked_out = False

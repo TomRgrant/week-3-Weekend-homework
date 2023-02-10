@@ -7,8 +7,8 @@
             <section>
                 <div class="book_display">
                     <div class="book_display_text">
-                        <h2>{{ book.title }}</h2>
-                        <h3>{{ book.author }}</h3>
+                        <h2 class="underline">{{ book.title }}</h2>
+                        <h3><i>{{ book.author }}</i></h3>
                         <h4>{{ book.genre }}</h4>
                         
                         {% if book.checked_out %}
@@ -23,6 +23,16 @@
 
                         <form class="book_button" action="book/{{ loop.index0 }}/delete" method="post">
                             <input class="delete_book" type="submit" value="Delete Book">
+                        </form>
+
+                        <form class="flex_justify_right" action="/book/{{ loop.index0 }}/update_checked_out" method="post">
+                            <div class="padding1">
+                                <label for="checked_out">Checked Out:</label>
+                                <input type="checkbox" id="checked_out" name="checked_out" value="Checked Out">
+                            </div>
+                            <div class="padding1">
+                                <input type="submit" name="submit" id="submit" value="Submit">
+                            </div>
                         </form>
                     </div>
                 </div>
