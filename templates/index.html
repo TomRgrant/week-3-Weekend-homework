@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <section>
+        {% for book in book_list %}
+
+            <section>
+                <div>
+                    <h2>{{ book.title }}</h2>
+                    <h3>{{ book.author }}</h3>
+                    <h4>{{ book.genre }}</h4>
+                    
+                    {% if book.checked_out %}
+                        <p><i>Checked Out</i></p>
+                    {% endif %}
+    
+                    <form action="book/{{ loop.index0 }}" method="get">
+                        <input type="submit" value="Inspect Book">
+                    </form>
+
+                    <form action="book/{{ loop.index0 }}/delete" method="post">
+                        <input type="submit" value="Delete Book">
+                    </form>
+                </div>
+            </section>
+
+        {% endfor %}
+
+        <div>
+            <form action="book/add_new_book" method="get">
+                <input type="submit" value="Add New Book">
+            </form>
+        </div>
+    </section>
+{% endblock content %}

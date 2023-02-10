@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <form action="/book/added_new_book" method="post">
+        <section>
+
+            <div>
+                <label for="title">Enter Book Title:</label>
+                <input type="text" name="title" id="title">
+            </div>
+    
+            <div>
+                <label for="author">Enter Book Author:</label>
+                <input type="text" name="author" id="author">
+            </div>
+    
+            <div>
+                <label for="fantasy">Fantasy</label>
+                <input type="radio" id="fantasy" name="genre" value="Fantasy">
+    
+                <label for="non_fiction">Non Fiction</label>
+                <input type="radio" id="non_fiction" name="genre" value="Non Fiction">
+    
+                <label for="mystery">Mystery</label>
+                <input type="radio" id="mystery" name="genre" value="Mystery">
+            </div>
+
+            <div>
+                <input type="submit" name="new_book" id="new_book" value="Submit Book Info">
+            </div>
+        </section>
+    </form>
+
+{% endblock content %}
