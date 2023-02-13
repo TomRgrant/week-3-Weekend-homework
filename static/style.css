@@ -1,3 +1,7 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 .blue_background_white_text {
     background-color: dodgerblue;
     color: white;
@@ -44,12 +48,14 @@ footer {
     background-color: darkcyan;
     color: cornsilk;
     border-radius: 8px;
+    font-style: italic;
 }
 
 .delete_book {
     background-color: red;
     color: black;
     border-radius: 8px;
+    font-weight: bold;
 }
 
 .book_button {

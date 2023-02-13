@@ -27,8 +27,8 @@
 
                         <form class="flex_justify_right" action="/book/{{ loop.index0 }}/update_checked_out" method="post">
                             <div class="padding1">
-                                <label for="checked_out">Checked Out:</label>
-                                <input type="checkbox" id="checked_out" name="checked_out" value="Checked Out">
+                                <label for="checked_out {{ loop.index0 }}">Checked Out:</label>
+                                <input type="checkbox" id="checked_out {{ loop.index0 }}" name="checked_out {{ loop.index0 }}" value="Checked Out">
                             </div>
                             <div class="padding1">
                                 <input type="submit" name="submit" id="submit" value="Submit">
